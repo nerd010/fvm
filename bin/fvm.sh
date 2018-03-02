@@ -21,6 +21,9 @@ function fvm() {
 	elif [ "$Func" == "download" ]; then
 		. $HOME/.fvm/bin/download.sh
 		download $Version
+	elif [ "$Func" == "delete" ]; then
+		. $HOME/.fvm/bin/delete.sh
+		delete $Version
 	else
 		printHelp
 	fi
