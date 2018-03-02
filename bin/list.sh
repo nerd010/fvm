@@ -1,7 +1,8 @@
 #!/bin/bash
 
 function list() {
-	for i in $(ls -A ${HOME}/.fvm/); do
+	mkdir -p ${HOME}/.fvm/versions
+	for i in $(ls -A ${HOME}/.fvm/versions/); do
 		echo "${i}"
 	done
 	return

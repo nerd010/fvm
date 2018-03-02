@@ -1,11 +1,12 @@
 #!/bin/bash
 
 function download() {
-	if [ ! -d "${HOME}/.fvm/${VERSION}" ]; then
-		mkdir -p ~/.fvm/$VERSION
-		echo "mkdir -p $HOME/.fvm/$VERSION"
-		curl https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/${ARCH}-${VERSION}/hyperledger-fabric-${ARCH}-${VERSION}.tar.gz | tar xz -C "$HOME/.fvm/${VERSION}"
+	Version=$1
+	if [ ! -d "${HOME}/.fvm/versions/${Version}" ]; then
+		mkdir -p ~/.fvm/versions/$Version
+		echo "mkdir -p $HOME/.fvm/versions/$Version"
+		curl https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/${ARCH}-${Version}/hyperledger-fabric-${ARCH}-${Version}.tar.gz | tar xz -C "$HOME/.fvm/versions/${Version}"
 	else
-		echo "${HOME}/.fvm/${VERSION} exist"
+		echo "version ${HOME}/.fvm/versions/${Version} exist"
 	fi
 }
