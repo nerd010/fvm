@@ -20,4 +20,3 @@ source $HOME/.fvm/bin/fvm.sh
 | 使用某个版本   | `fvm use 1.0.0`      |                        |
 | 下载某个版本   | `fvm download 1.0.0` |                        |
 | 删除某个版本   | `fvm delete 1.0.0`   | 可以删除下载失败的版本 |
-
