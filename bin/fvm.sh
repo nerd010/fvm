@@ -13,7 +13,7 @@ function fvm() {
 	Func=$1
 	Version=$2
 	if [ "$Func" == "use" ]; then
-		. $HOME/.fvm/bin/use.sh $Version
+		. $HOME/.fvm/bin/use.sh
 		use $Version
 	elif [ "$Func" == "list" ]; then
 		. $HOME/.fvm/bin/list.sh
